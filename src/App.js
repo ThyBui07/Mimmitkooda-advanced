@@ -19,18 +19,6 @@ function App() {
             <Route exact path="/">
               <Home />
             </Route>
-            <Route exact path="/cart">
-              <Cart />
-            </Route>
-            <Route path="/product/:productId">
-              <Product />
-            </Route>
-            <Route path="/why-us">
-              <WhyUs />
-            </Route>
-            <Route path="/our-services">
-              <OurServices />
-            </Route>
           </Switch>
         </main>
         <Footer />
