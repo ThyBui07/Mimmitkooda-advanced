@@ -38,7 +38,7 @@ export class Instagram extends Component {
   }
 
   componentDidMount() {
-    fetch('http://www.mocky.io/v2/5dc56b2d3200007d00769a5a')
+    fetch('https://www.mocky.io/v2/5dc56b2d3200007d00769a5a')
       .then(response => response.json())
       .then(data => this.setState({ images: data.images }));
   }
