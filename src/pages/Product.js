@@ -36,16 +36,16 @@ const Description = styled.div`
 
 function Product() {
 
-  const { handle } = useParams()
+  const { productId } = useParams()
   const { products } = useContext(ShopContext)
   if( ! products ) return null
-  const product = products.find(product => product.handle === handle)
+  const product = products.find(product => product.id === productId)
   if( ! product ) return null
   const amount = (window.innerWidth <= 1280) && (window.innerWidth >= 1024) ? 3 : 4
 
   // Random subset of products.
   const additionalProducts = products
-    .filter(product => product.handle !== handle)
+    .filter(product => product.id !== productId)
     .sort(() => 0.5 - Math.random())
     .slice(0, amount)
 
