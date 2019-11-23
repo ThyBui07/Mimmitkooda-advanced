@@ -10,6 +10,12 @@ Within this task we will learn:
 
 You task is to link the navigation items to the routes we just created in the previous tasks. The idea is to use the `Link` components' `to` properties to point to the paths that we defined in the previous task. You can also import the logo image and use it as content of the navigation item.
 
+The pages that should be found from the navigation are:
+- Home
+- Why Us
+- Our Services
+- Cart
+
 **Files**
 
 - `src/components/Navigation.js`

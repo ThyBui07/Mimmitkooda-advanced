@@ -27,20 +27,7 @@ function Navigation() {
   return (
     <nav>
       <ul>
-        <ListItem>
-          <Link to="/">
-            <img src={logo} alt="Home" />
-          </Link>
-        </ListItem>
-        <ListItem>
-          <Link to="/why-us">Why Us</Link>
-        </ListItem>
-        <ListItem>
-          <Link to="/our-services">Our Services</Link>
-        </ListItem>
-        <ListItem>
-          <Link to="/cart">Cart <Count>{cartCount}</Count></Link>
-        </ListItem>
+        <li>Navigation should appear here</li>
       </ul>
     </nav>
   )
