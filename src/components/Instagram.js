@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
+import 'whatwg-fetch'
 
 const ImageList = styled.div`
   list-style: none;
@@ -48,7 +49,7 @@ export class Instagram extends Component {
     return (
       <ImageList>
         {images && images.map(image => (
-          <Image key={image.id} alt={image.id} src={image.src} />        
+          <Image key={image.id} alt={image.id} src={image.src} />
         ))}
       </ImageList>
     )
