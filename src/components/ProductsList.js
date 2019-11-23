@@ -27,11 +27,7 @@ const List = styled.ul`
 function ProductsList({ products }) {
   return (
     <List>
-      {products && products.map(product => (
-        <li key={product.id}>
-          <ProductCard product={product} />
-        </li>
-      ))}
+      Products should be here!
     </List>
   )
 }
