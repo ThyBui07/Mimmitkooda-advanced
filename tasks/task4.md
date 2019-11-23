@@ -76,9 +76,9 @@ function Home() {
   return (
     <div>
       <Banner />
-      <Heading name="Products" />
+      <Heading title="Products" />
       <ProductsList products={products} />
-      <Heading name="Our Instagram" />
+      <Heading title="Our Instagram" />
       <Instagram />
       <Description />
       <LikeMyPage />
