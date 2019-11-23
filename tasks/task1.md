@@ -2,7 +2,7 @@
 
 **Task Definition**
 
-- Open the project in Code Sandbox **TODO: insert link to CSB here!**
+- Open the project in [Code Sandbox](https://codesandbox.io/s/github/ColumbiaRoad/mimmitkoodaa-advanced/tree/start)
 - Create `.env.local` file to the project
 - Insert the given `access key` in place to the file you just created:
 
