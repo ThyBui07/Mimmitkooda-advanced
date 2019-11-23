@@ -25,12 +25,7 @@ const ViewButton = styled(Link)`
 function ProductCard({ product }) {
   return (
     <div className="product-card">
-      <ProductImage image={product.image} />
       <h3>{product.title}</h3>
-      <PriceTag price={product.variant.price} />
-      <ViewButton to={`/product/${product.id}`}>
-        View product
-      </ViewButton>
     </div>
   )
 }
