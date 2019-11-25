@@ -18,9 +18,14 @@ const Button = styled.button`
 function AddToCartButton({ product, quantity = 1 }) {
   const { addLineItem } = useContext(ShopContext)
   return (
-    <Button onClick={() => {
-      console.log('Add product to cart here!')
-    }}>Add to cart</Button>
+    <Button onClick={ () =>
+      {
+      console.log('Add product to cart here!');
+      addLineItem(product.variant.id, quantity)
+      }
+    }>
+      Add to cart
+    </Button>
   )
 }
 

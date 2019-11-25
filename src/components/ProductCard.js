@@ -26,6 +26,11 @@ function ProductCard({ product }) {
   return (
     <div className="product-card">
       <h3>{product.title}</h3>
+      <ProductImage image={product.image} />
+      <PriceTag price={product.variant.price} />
+      <ViewButton to={`/product/${product.handle}`} >
+        View Product
+      </ViewButton>
     </div>
   )
 }

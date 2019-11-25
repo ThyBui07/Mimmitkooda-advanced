@@ -11,6 +11,29 @@ const List = styled.ul`
   grid-gap: 24px;
   margin-bottom: 24px;
 
+  @keyframes blink {
+    0% { box-shadow: 0 0 15px red; }
+    50% { box-shadow: none; }
+    100% { box-shadow: 0 0 15px red; }
+}
+
+@-webkit-keyframes blink {
+    0% { box-shadow: 0 0 15px red; }
+    50% { box-shadow: 0 0 0; }
+    100% { box-shadow: 0 0 15px red; }
+}
+  >li:first-child {
+    /* -webkit-box-shadow: 1px 6px 37px 0px rgba(51,50,51,0.52);
+-moz-box-shadow: 1px 6px 37px 0px rgba(51,50,51,0.52);
+box-shadow: 1px 6px 37px 0px rgba(51,50,51,0.52); */
+
+  -webkit-animation: blink 3.0s linear infinite;
+  -moz-animation: blink 3.0s linear infinite;
+  -ms-animation: blink 3.0s linear infinite;
+  -o-animation: blink 3.0s linear infinite;
+  animation: blink 3.0s linear infinite;
+  }
+
   @media screen and (min-width: 700px) {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -25,9 +48,18 @@ const List = styled.ul`
 `
 
 function ProductsList({ products }) {
+  console.log(products);
+
   return (
     <List>
-      Products should be here!
+      {
+        products &&
+        products.map(product => (
+          <li key={product.id}>
+            <ProductCard product={product} />
+          </li>
+        ))
+      }
     </List>
   )
 }
